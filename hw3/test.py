@@ -56,22 +56,22 @@ if __name__ == '__main__':
 	print("=================================")
 	print("====== loading model v4~v8 ======")
 	print("=================================")
-	model1 = load_model('test_model1.h5')
-	model2 = load_model('test_model2.h5')
+	#model1 = load_model('test_model1.h5')
+	#model2 = load_model('test_model2.h5')
 	model3 = load_model('test_model3.h5')
-	model4 = load_model('test_model4.h5')
+	#model4 = load_model('test_model4.h5')
 
 	## predicting
 	print("=================================")
-	print("========== prediecting ==========")
+	print("========== predicting ==========")
 	print("=================================")
-	ytest1 = model1.predict(xtest, batch_size=batch)
-	ytest2 = model2.predict(xtest, batch_size=batch)
+	#ytest1 = model1.predict(xtest, batch_size=batch)
+	#ytest2 = model2.predict(xtest, batch_size=batch)
 	ytest3 = model3.predict(xtest, batch_size=batch)
-	ytest4 = model4.predict(xtest, batch_size=batch)
+	#ytest4 = model4.predict(xtest, batch_size=batch)
 	#ytest5 = model5.predict(xtest, batch_size=batch)
 	
-	ytest = ytest1 + ytest2 + ytest3 + ytest4
+	ytest = ytest3
 
 	#ytest = model.predict(xtest, batch_size=batch)
 	ytest = np.argmax(ytest, axis=1)
