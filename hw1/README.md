@@ -1,9 +1,7 @@
 # Machine Learning HW1
 - Topic: Linear Regression
 - Data Download: https://inclass.kaggle.com/c/ml2017-hw1-pm2-5
-- Shell Script Usage: $1 training data
-					  $2 testing data
-					  $3 predicting result
+- Shell Script Usage: $1 training data, $2 testing data, $3 predicting result
 
 
 # Files
