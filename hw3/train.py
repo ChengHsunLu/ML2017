@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import time
 from scipy import ndimage
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 ## keras
 from keras.models import Sequential, Model
 from keras import layers
