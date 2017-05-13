@@ -7,7 +7,8 @@
 
 
 # Files
-- hw2_generative.sh, hw2_generative.py: generative model
-- hw2_logistic.sh, hw2_logistic.py: logistic model
-- hw2_best.sh: best model on Kaggle
-- my_model.csv: trained parameters
+- hw3_train.sh, hw3_train.py: training 
+- hw3_test.sh, hw3_test.py: testing
+- selftrain.py: selftraining
+- salmap.py: saliency map
+- visfilter.py: visualize the filters
