@@ -1,9 +1,9 @@
 # Machine Learning HW3
 - Topic: Convolutional Neural Network
 - Data Download: https://inclass.kaggle.com/c/ml2017-hw3 
-- Shell Script Usage: 
-	hw3_train.sh: $1 training data
-	hw3_test.sh: $1 testing data, $2 predicting result
+- Shell Script Usage:    
+	hw3_train.sh: $1 training data   
+	hw3_test.sh: $1 testing data, $2 predicting result   
 
 
 # Files
