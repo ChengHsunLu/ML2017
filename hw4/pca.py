@@ -66,7 +66,7 @@ def draw_eigenfaces(eface):
 	fig.savefig('eigenfaces.png', dpi=100)
 	
 def draw_reconstruct(eface, imgMean):
-	fig = plt.figure(figsize=(16, 9))
+	fig = plt.figure(figsize=(9, 16))
 	for i in range(eface.shape[1]):
 		ax = fig.add_subplot(np.sqrt(eface.shape[1]), np.sqrt(eface.shape[1]), i+1)
 		ax.imshow((eface[:,i]+imgMean).reshape(64, 64), cmap='gray')
@@ -74,6 +74,18 @@ def draw_reconstruct(eface, imgMean):
 		plt.yticks(np.array([]))
 	plt.tight_layout()
 	fig.savefig('reconst100.png', dpi=100)
+
+def draw_original(eface):
+	fig = plt.figure(figsize=(9, 16))
+	for i in range(eface.shape[1]):
+		ax = fig.add_subplot(np.sqrt(eface.shape[1]), np.sqrt(eface.shape[1]), i+1)
+		ax.imshow((eface[:,i]+imgMean).reshape(64, 64), cmap='gray')
+		plt.xticks(np.array([]))
+		plt.yticks(np.array([]))
+		plt.tight_layout()
+	fig.savefig('original.png', dpi=100)
+
+
 
 if __name__ == '__main__':
 	img = readimg()
@@ -89,7 +101,7 @@ if __name__ == '__main__':
 	# for 1-2
 	rec, eface = pca(img, imgMean, 5)
 	draw_reconstruct(rec, imgMean)
-	
+	draw_original(img)	
 	# for 1-3
 	for i in range(100):
 		
