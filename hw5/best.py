@@ -21,12 +21,14 @@ DATA3 = 'rnn_v1.pickle'
 DATA4 = 'rnn_v5.pickle'
 DATA5 = 'rnn_v3.pickle'
 #DATA6 = 'rnn_v9.pickle'
+#DATA7 = 'rnn_v9.pickle'
 MODEL1 = './model/rnn_v6.hdf5'
 MODEL2 = './model/rnn_v4.hdf5'
 MODEL3 = './model/rnn_v1.hdf5'
 MODEL4 = './model/rnn_v5.hdf5'
 MODEL5 = './model/rnn_v3.hdf5'
 #MODEL6 = './model/rnn_v9.hdf5'
+#MODEL7 = "./model/rnn_v8.hdf5"
 with open('TAGS.pickle', 'rb') as handle:
     all_tags = pickle.load(handle)
 TEST_PATH = sys.argv[1]
@@ -70,6 +72,8 @@ def main():
 	x_test4 = pickle.load(open(DATA4, 'rb'))
 	x_test5 = pickle.load(open(DATA5, 'rb'))
 	#x_test6 = pickle.load(open(DATA6, 'rb'))
+	#x_test7 = pickle.load(open(DATA7, 'rb'))
+
 	
 	print("Loading Models")
 	model1 = load_model(MODEL1, custom_objects={'f1_score':f1_score})
@@ -78,6 +82,7 @@ def main():
 	model4 = load_model(MODEL4, custom_objects={'f1_score':f1_score})
 	model5 = load_model(MODEL5, custom_objects={'f1_score':f1_score})
 	#model6 = load_model(MODEL6, custom_objects={'f1_score':f1_score})
+	#model7 = load_model(MODEL7, custom_objects={'f1_score':f1_score})
 	
 	print("Predicting")
 	y_test1 = model1.predict(x_test1)
@@ -85,8 +90,9 @@ def main():
 	y_test3 = model3.predict(x_test3)
 	y_test4 = model4.predict(x_test4)
 	y_test5 = model5.predict(x_test5)
-	#y_test6 = model6.predict(x_test5)
-	#y_test = y_test1 + y_test2 + y_test3 + y_test4 + y_test5 + y_test6
+	#y_test6 = model6.predict(x_test6)
+	#y_test7 = model6.predict(x_test7)
+	y_test = y_test1*2.0 + y_test2 + y_test3 + y_test4 + y_test5*2.0# + y_test6 + y_test7
 	
 	
 	thresh = 0.4
@@ -98,7 +104,7 @@ def main():
 	#y_pred6 = (y_test6 > thresh).astype('int')
 	
 	y = y_pred1 + y_pred2 + y_pred3 + y_pred4 + y_pred5# + y_pred6
-	result_write(y, 2.0)
+	result_write(y_test, 0.4*7)
 		
 if __name__ == '__main__':
 	main()
