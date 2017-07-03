@@ -1,9 +1,9 @@
 # Machine Learning HW5
 - Topic: Recurrent Neural Network
 - Data Download: https://inclass.kaggle.com/c/ml2017-hw5
-- Shell Script Usage:	 
-	hw5_best.sh: $1 testing data, $2 predicting result	
-	hw5_rnn.sh: $1 testing data, $2 predicting result	
+- Shell Script Usage:      
+	hw5_best.sh: $1 testing data, $2 predicting result    
+	hw5_rnn.sh: $1 testing data, $2 predicting result    
 
 
 # Files
