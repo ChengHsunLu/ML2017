@@ -9,3 +9,4 @@
 - HW3: CNN for emotional classification
 - HW4: PCA, word2vec and intrinsic dimension estimation
 - HW5: RNN
+- HW6: Matrix factorization
